@@ -1,0 +1,39 @@
+.container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--background);
+  position: fixed;
+  z-index: 999999;
+  overflow: hidden;
+  animation: container 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) both 1.2s;
+}
+
+.logo {
+  width: 7rem;
+  height: 7rem;
+  animation: logo 1.2s cubic-bezier(0.075, 0.82, 0.165, 1) both;
+}
+
+@keyframes logo {
+  from {
+    opacity: 0;
+    transform: scale(1.5) rotate(-30deg);
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+    filter: blur(0);
+  }
+}
+@keyframes container {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
